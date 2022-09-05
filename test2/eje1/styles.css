@@ -1,0 +1,27 @@
+* {
+    text-align: center;
+    color: blue;
+}
+
+p,h6 {
+    color: green;
+    text-align: justify;
+    
+}
+
+#content {
+    text-align: justify;
+    color: red;
+}
+
+#title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.clase1 {
+    text-align: right;
+}
+.clase2 {
+    color: blue;
+}
