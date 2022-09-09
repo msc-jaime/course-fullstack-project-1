@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+}
+
+.box {
+    flex-grow: 1;
+    background-color: aquamarine;
+    height: 10px;
+}
+
+.box1 {
+    flex-grow: 3;
+    background-color: blue;
+    height: 10px;
+}
