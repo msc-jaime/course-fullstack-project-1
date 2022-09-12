@@ -42,6 +42,8 @@ Cambio de formato de imagenes: [CONVERT.IO](https://convertio.co/es/)
 
 Diseño: [PENPOT](https://penpot.app/)
 
+Generador de imagenes: [PLACEHOLDER IMG](https://via.placeholder.com/400x200.png)
+
 ## TEMA 3: JAVASCRIPT
 
 Recurso: [MANUAL JAVASCRIPT](https://www.w3schools.com/css/)
