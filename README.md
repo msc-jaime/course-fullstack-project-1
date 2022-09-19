@@ -16,6 +16,8 @@ Enlace repositorio grabaciones: [https://bit.ly/3AjXJqt](https://bit.ly/3AjXJqt)
 - Herramienta IDE - VSCODE
 - Navegador, debug e inspect
 
+Guía de refactorización y patrones de diseño: [REFACTORING GURU](https://refactoring.guru/)
+
 ## TEMA 1: HTML5
 
 - ¿Qué es?
@@ -47,5 +49,12 @@ Generador de imagenes: [PLACEHOLDER IMG](https://via.placeholder.com/400x200.png
 ## TEMA 3: JAVASCRIPT
 
 Recurso: [MANUAL JAVASCRIPT](https://www.w3schools.com/css/)
+
+## TEMA 4: TYPESCRIPT
+
+Documentación oficial TS: [TYPESCRIPTLANG](https://www.typescriptlang.org/)
+IDE online 1: [IDE TYPESCRIPTLANG](https://www.typescriptlang.org/play)
+IDE online 2: [IDE vscode](https://vscode.dev/)
+IDE online 3: [STACKBLITS](https://stackblitz.com/)
 
 ## TEMA 4: ANGULAR
