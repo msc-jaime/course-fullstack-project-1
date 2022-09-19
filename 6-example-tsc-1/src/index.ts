@@ -1,3 +1,6 @@
+import fetch from 'node-fetch';
+
+// GET ALL  RESOURCE OF POSTS
 let url: string = "https://jsonplaceholder.typicode.com/posts"
 
 interface Post {
@@ -7,13 +10,13 @@ interface Post {
     body: string,
 }
 
-async function getFetch(url: string){
+async function getFetch(url: string) {
     const response = await fetch(url)
     const json = await response.json()
     return json as Post[]
 }
 
-async function showFirstPost(){
+async function showFirstPost() {
     const post = await getFetch(url)
     const firtPost = post[0]
     console.log(firtPost)
@@ -22,6 +25,60 @@ async function showFirstPost(){
 
 showFirstPost()
 
+// GET ALL  RESOURCE OF COMMENTS
+async function getComments() {
+    let url2: string = "https://jsonplaceholder.typicode.com/comments"
+    await fetch(url2).then(response => response.json()).then(json => console.log(json))
+}
 
-let fectComments = fetch("https://jsonplaceholder.typicode.com/comments").then(response => response.json()).then(json => console.log(json))
+getComments()
 
+// CREATING A RESOURCE
+fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+    }),
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+    },
+})
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+// UPDATING A RESOURCE
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PUT',
+    body: JSON.stringify({
+        id: 1,
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+    }),
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+    },
+})
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+// PATCHING A RESOURCE
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PATCH',
+    body: JSON.stringify({
+        title: 'foo',
+    }),
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+    },
+})
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+
+// DELETING A RESOURCE
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+});
