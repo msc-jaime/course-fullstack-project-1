@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "tsc && node build/index.js"
+    "start": "tsc && node build/index.js",
+    "build":  "tsc"
   },
   "devDependencies": {
     "@types/node": "^18.7.18",

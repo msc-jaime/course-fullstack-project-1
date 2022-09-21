@@ -22,7 +22,6 @@ async function showFirstPost() {
     console.log(firtPost)
 }
 
-
 showFirstPost()
 
 // GET ALL  RESOURCE OF COMMENTS

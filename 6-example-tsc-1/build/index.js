@@ -25,14 +25,19 @@ function showFirstPost() {
     });
 }
 showFirstPost();
+let a;
+a = ['dato'];
+a.push('dato2');
+console.log(a);
+/*
 // GET ALL  RESOURCE OF COMMENTS
-function getComments() {
-    return __awaiter(this, void 0, void 0, function* () {
-        let url2 = "https://jsonplaceholder.typicode.com/comments";
-        yield fetch(url2).then(response => response.json()).then(json => console.log(json));
-    });
+async function getComments() {
+    let url2: string = "https://jsonplaceholder.typicode.com/comments"
+    await fetch(url2).then(response => response.json()).then(json => console.log(json))
 }
-getComments();
+
+getComments()
+
 // CREATING A RESOURCE
 fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
@@ -47,6 +52,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 })
     .then((response) => response.json())
     .then((json) => console.log(json));
+
 // UPDATING A RESOURCE
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'PUT',
@@ -62,6 +68,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 })
     .then((response) => response.json())
     .then((json) => console.log(json));
+
 // PATCHING A RESOURCE
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'PATCH',
@@ -74,7 +81,12 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 })
     .then((response) => response.json())
     .then((json) => console.log(json));
+
+
 // DELETING A RESOURCE
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
-    method: 'DELETE',
+  method: 'DELETE',
 });
+
+
+*/ 
