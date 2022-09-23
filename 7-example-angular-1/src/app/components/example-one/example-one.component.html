@@ -1,0 +1,13 @@
+<!-- Attributos -->
+<!-- https://www.w3schools.com/tags/ref_attributes.asp -->
+<button disabled="true">Button one</button>
+<button [disabled]="isDisable">Button two</button>
+<button (click)="isDisable=!isDisable">Button three</button>
+
+<!-- Eventos -->
+<!-- https://www.w3schools.com/tags/ref_eventattributes.asp -->
+<h3>Mi nombre es {{ nombre }}</h3>
+<button (click)="cambiarNombre()">Cambiar nombre</button>
+
+<h3>Contador: {{ contador }}</h3>
+<button (click)="sumarContador()">Sumar +1</button>

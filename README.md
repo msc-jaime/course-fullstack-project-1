@@ -7,7 +7,7 @@ Duración: 60 horas.
 
 Enlace de acceso a clase: [http://meet.google.com/hgs-fyov-fcv](http://meet.google.com/hgs-fyov-fcv)
 
-Enlace grupo de WhatsApp: [https://chat.whatsapp.com/](https://chat.whatsapp.com/)BpguXTlh2pT7azN4f1RWEA
+Enlace grupo de WhatsApp: [https://chat.whatsapp.com/](https://chat.whatsapp.com/BpguXTlh2pT7azN4f1RWEA)
 
 Enlace repositorio grabaciones: [https://bit.ly/3AjXJqt](https://bit.ly/3AjXJqt)
 
