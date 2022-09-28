@@ -1,0 +1,40 @@
+<!-- directiva ngFor -->
+<ul>
+    <li *ngFor="let fruta of frutas"> {{ fruta }}</li>
+</ul>
+<button (click)="addFrutas()">Add frutas</button>
+<br>
+<br>
+
+<!-- directiva ngIF -->
+<ng-container *ngIf="!isLogged; else logged">
+    <button (click)="isLogged = true">Iniciar sesión</button>
+    <button>Registrarse</button>
+</ng-container>
+
+<ng-template #logged>
+    <button>Ir a mi perfil</button>
+    <button (click)="isLogged = false">Cerrar sesión</button>
+</ng-template>
+
+<!-- ngModule -->
+<h3>Mi nombre es {{ nombre }}</h3>
+<input type="text" [ngModel]="nombre">
+<input type="text" [(ngModel)]="nombre">
+<input type="text" [ngModel]="nombre" (ngModelChange)="setNombre($event)">
+
+
+<h3>Lista de marca de carros: </h3>
+<input type="text" [(ngModel)]="selectMarcaCarro">
+<select name="" id="" [(ngModel)]="selectMarcaCarro">
+    <option value="" selected>Seleccione...</option>
+    <option value="Toyota">Toyota</option>
+    <option value="Hyundai">Hyundai</option>
+    <option value="Mazda">Mazda</option>
+</select>
+<h4>Has seleccionado {{selectMarcaCarro}}</h4>
+<br>
+
+<!-- token from service loggin -->
+<h3>{{ getToken() }}</h3>
+<button (click)="setToken()">CambiarToken</button>

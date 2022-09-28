@@ -1,0 +1,6 @@
+<h1>CRUD post</h1>
+<h3>Url: {{ url }}</h3>
+<ul>
+    <li *ngFor="let post of listPosts"> {{ post.id }} {{ post.title }}: {{ post.body }} {{ post.userId }} </li>
+</ul>
+<button (click)="createPots()">Crear post</button>
