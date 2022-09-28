@@ -2,12 +2,16 @@
 <!-- https://www.w3schools.com/tags/ref_attributes.asp -->
 <button disabled="true">Button one</button>
 <button [disabled]="isDisable">Button two</button>
-<button (click)="isDisable=!isDisable">Button three</button>
 
 <!-- Eventos -->
 <!-- https://www.w3schools.com/tags/ref_eventattributes.asp -->
 <h3>Mi nombre es {{ nombre }}</h3>
 <button (click)="cambiarNombre()">Cambiar nombre</button>
+<button (click)="isDisable=!isDisable">Button three</button>
 
 <h3>Contador: {{ contador }}</h3>
 <button (click)="sumarContador()">Sumar +1</button>
+
+<!-- token from service loggin -->
+<h3>{{ getToken() }}</h3>
+
