@@ -19,9 +19,23 @@
 
 <!-- ngModule -->
 <h3>Mi nombre es {{ nombre }}</h3>
-<input type="text" [ngModel]="nombre">
-<input type="text" [(ngModel)]="nombre">
-<input type="text" [ngModel]="nombre" (ngModelChange)="setNombre($event)">
+
+<mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput [ngModel]="nombre">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="nombre">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput [ngModel]="nombre" (ngModelChange)="setNombre($event)">
+</mat-form-field>
+
+
+
+
 
 
 <h3>Lista de marca de carros: </h3>
@@ -32,6 +46,20 @@
     <option value="Hyundai">Hyundai</option>
     <option value="Mazda">Mazda</option>
 </select>
+
+<mat-form-field appearance="fill">
+    <mat-label>Buscar</mat-label>
+    <input matInput [(ngModel)]="selectMarcaCarro">
+</mat-form-field>
+<mat-form-field appearance="fill" >
+    <mat-label [(ngModel)]="selectMarcaCarro">Seleccione...</mat-label>
+    <mat-select>
+      <mat-option value="Toyota">Toyota</mat-option>
+      <mat-option value="Hyundai">Hyundai</mat-option>
+      <mat-option value="Mazda">Mazda</mat-option>
+    </mat-select>
+</mat-form-field>
+
 <h4>Has seleccionado {{selectMarcaCarro}}</h4>
 <br>
 

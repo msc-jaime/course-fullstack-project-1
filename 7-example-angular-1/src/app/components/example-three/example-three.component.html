@@ -6,8 +6,8 @@
         {{ post.title }}: 
         {{ post.body }} 
         {{ post.userId }} 
-        <button (click)="updatePost(post.id)">Actualizar</button>
-        <button (click)="deletePost(post.id)">Delete</button>
+        <button (click)="updatePost(post.id)" mat-stroked-button color="primary">Actualizar</button>
+        <button (click)="deletePost(post.id)" mat-stroked-button color="primary">Delete</button>
     </li>
 </ul>
 <button (click)="createPost()">Crear post</button>
