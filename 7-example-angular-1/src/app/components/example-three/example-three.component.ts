@@ -18,12 +18,27 @@ export class ExampleThreeComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    
     this.crubServices.getPosts(this.url).subscribe(res => this.listPosts = res)
   }
 
-  createPots() {
-    this.crubServices.createPost(this.url).subscribe(res => console.log(res))
+  createPost() {
+    this.crubServices.createPost(this.url, {
+      title: 'foo',
+      body: 'bar',
+      userId: 1,
+    }).subscribe(res => console.log(res))
+  }
+
+  updatePost(id: number) {
+    this.crubServices.updatePost(`${this.url}/${id}`, {
+      title: 'foo 11',
+      body: 'bar 11',
+      userId: 1,
+    }).subscribe(res => console.log(res))
+  }
+
+  deletePost(id: number) {
+    this.crubServices.deletePost(`${this.url}/${id}`).subscribe(res => console.log(res))
   }
   
 }

@@ -17,14 +17,15 @@ export class CrubService {
     return this.httpClient.get<Post[]>(url)
   }
 
-  createPost(url: string) {
-    return this.httpClient.post(url,{
-      title: 'foo',
-      body: 'bar',
-      userId: 1,
-    })
+  createPost(url: string, body: object) {
+    return this.httpClient.post(url, body)
   }
 
-  updatePost(){}
-  deletePost(){}
+  updatePost(url:string, body: object){
+    return this.httpClient.put(url, body)
+  }
+
+  deletePost(url:string){
+    return this.httpClient.delete(url)
+  }
 }

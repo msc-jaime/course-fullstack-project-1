@@ -1,6 +1,13 @@
 <h1>CRUD post</h1>
 <h3>Url: {{ url }}</h3>
 <ul>
-    <li *ngFor="let post of listPosts"> {{ post.id }} {{ post.title }}: {{ post.body }} {{ post.userId }} </li>
+    <li *ngFor="let post of listPosts"> 
+        {{ post.id }} 
+        {{ post.title }}: 
+        {{ post.body }} 
+        {{ post.userId }} 
+        <button (click)="updatePost(post.id)">Actualizar</button>
+        <button (click)="deletePost(post.id)">Delete</button>
+    </li>
 </ul>
-<button (click)="createPots()">Crear post</button>
+<button (click)="createPost()">Crear post</button>
