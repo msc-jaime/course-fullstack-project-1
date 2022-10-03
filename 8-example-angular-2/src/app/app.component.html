@@ -1,7 +1,9 @@
 
+<!-- https://angular.io/guide/inputs-outputs -->
 <h1>Example Angular 2</h1>
 <hr>
 <h3>Componente superior o componente padre</h3>
-<h2>Nombre: {{ name }}</h2>
+<h5>Nombre: {{ name }}</h5>
+<h5>Valor: {{ valor }}</h5>
 <hr>
-<app-secundario [nameRef]="name"></app-secundario>
+<app-secundario [nameRef]="name" (salidaNameRef)="valor = $event"></app-secundario>

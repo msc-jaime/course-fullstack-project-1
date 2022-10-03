@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-secundario',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SecundarioComponent implements OnInit {
 
   @Input() nameRef: string = ""
+  @Output() salidaNameRef = new EventEmitter<number>()
 
   constructor() { }
 
@@ -15,9 +16,14 @@ export class SecundarioComponent implements OnInit {
   }
 
   name: string = ""
+  numero: number = 0
 
   changeName(): void {
-    this.nameRef = "Gloria"
     this.name = this.nameRef
+  }
+
+  emitirEvent() {
+    this.numero += 1
+    this.salidaNameRef.emit(this.numero)
   }
 }
