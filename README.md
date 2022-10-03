@@ -60,3 +60,11 @@ IDE online 3: [STACKBLITS](https://stackblitz.com/)
 ## TEMA 4: ANGULAR
 
 Pagina oficial [ANGULAR](https://angular.io/)
+
+## TEMA 5: PHP 8.1 / LARAVEL
+
+Pila web (Servidor web, php, motor de base de datos)
+Pila web 1: [Laragon](https://laragon.org/download/index.html)
+Pila web 2: [XAMPP](https://www.apachefriends.org/es/index.html)
+Cliente de base de datos 1: [DBEAVER](https://dbeaver.io/)
+Cliente de base de datos 2: [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
