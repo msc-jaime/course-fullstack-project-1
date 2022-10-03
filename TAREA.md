@@ -2,11 +2,11 @@
 
 ## ¿Qué se busca evaluar?
 
-- Diseño de la interfaz de usuario usando la herramienta penpot.app.
+- Diseño del front-ent usando la herramienta penpot.app.
 
 - Componentes en angular maquetados con base en el diseño anterior.
 
-- Desarrollo del backen-usando PHP/LARAVEL
+- Desarrollo del back-end usando PHP/LARAVEL
 
 ### Entregable
 
@@ -14,7 +14,7 @@ Se evaluará el último día de clase el desarrollo de la Actividad.
 
 #### Mínimo entregable
 
-- Un CRUD funcional con Angular PHP/LARAVEL o la lista completa de casos de uso del ejercicio planteado.
+- Un CRUD funcional con Angular y PHP/LARAVEL o la lista completa de casos de uso del ejercicio planteado.
 - El código desarrollado se debe publicar en github/gitlab.
 - Incluir en el código desarrollado un Readme.md personalizado con información que considere pertinente.
 - El enlace al repositorio de Git se debe de entregar al correo [msc.jaime](msc.jaime@outlook.com).
