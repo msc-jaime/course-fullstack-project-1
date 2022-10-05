@@ -73,8 +73,8 @@ echo GREETING;
 
 <!-- Operadores ternario -->
 <?php
-$cond = true
-$x = cond ? "es verdadero" : "es falso";
+$cond = true;
+$x = $cond ? "es verdadero" : "es falso";
 // https://www.w3schools.com/php/php_operators.asp
 ?>
 
