@@ -1,5 +1,16 @@
 import fetch from 'node-fetch';
 
+// Operadores ternario
+let var1 = true
+
+if(var1){
+    console.log("es verdadero")
+}else{
+    console.log("es falso")
+}
+
+var1 ? console.log("es verdadero") : console.log("es falso")
+
 // GET ALL  RESOURCE OF POSTS
 let url: string = "https://jsonplaceholder.typicode.com/posts"
 

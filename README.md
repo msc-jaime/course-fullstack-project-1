@@ -24,7 +24,7 @@ Guía de refactorización y patrones de diseño: [REFACTORING GURU](https://refa
 - Estructura de un HTML5
 - Etiquetas y atributos
 
-Recurso: [MANUAL HTML](https://www.w3schools.com/html/)
+Recurso: [TUTORIAL HTML](https://www.w3schools.com/html/)
 
 ## TEMA 2: CSS
 
@@ -34,7 +34,7 @@ Recurso: [MANUAL HTML](https://www.w3schools.com/html/)
 - Colores
 - Medidas de tamaño
 
-Recurso: [MANUAL CSS](https://www.w3schools.com/css/)
+Recurso: [TUTORIAL CSS](https://www.w3schools.com/css/)
 
 Colores: [MATERIALIZE](https://materializecss.com/color.html)
 
@@ -68,3 +68,5 @@ Pila web 1: [Laragon](https://laragon.org/download/index.html)
 Pila web 2: [XAMPP](https://www.apachefriends.org/es/index.html)
 Cliente de base de datos 1: [DBEAVER](https://dbeaver.io/)
 Cliente de base de datos 2: [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+Recurso: [TUTORIAL PHP](https://www.w3schools.com/php/default.asp)
