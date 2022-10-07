@@ -1,5 +1,6 @@
 <?php
 
+// File: Category.php
 class Category {
 
     protected $name;
@@ -9,6 +10,7 @@ class Category {
     }
 }
 
+// File: Post.php
 class Post {
 
     protected $category;
@@ -26,6 +28,7 @@ class Post {
     }
 }
 
+// File: Logical.php
 $category = new Category;
 $post = new Post(new Category);
 echo $post->getAll() . "\n";

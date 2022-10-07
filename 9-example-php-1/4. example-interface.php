@@ -4,7 +4,7 @@ interface IPlayer {
     public function getColor();
 }
 
-class MarioBros implements IPlayer, a {
+class MarioBros implements IPlayer {
     public function getName(){
         echo __CLASS__ . "\n";
     }
