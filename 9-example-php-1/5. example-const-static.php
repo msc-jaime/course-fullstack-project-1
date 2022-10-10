@@ -15,6 +15,8 @@ class d
 
 echo a::b;
 echo d::e;
+$dd = new d;
+echo $dd->getMsg();
 
 
 
