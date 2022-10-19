@@ -66,6 +66,7 @@ Pagina oficial [ANGULAR](https://angular.io/)
 Pila web (Servidor web, php, motor de base de datos)
 Pila web 1: [Laragon](https://laragon.org/download/index.html)
 Pila web 2: [XAMPP](https://www.apachefriends.org/es/index.html)
+Motor de Base de datos: [Mysql](https://dev.mysql.com/downloads/installer/)
 Cliente de base de datos 1: [DBEAVER](https://dbeaver.io/)
 Cliente de base de datos 2: [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
