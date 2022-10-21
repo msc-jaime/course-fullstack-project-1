@@ -2,11 +2,11 @@
 
 ## ¿Qué se busca evaluar?
 
-- Diseño del front-ent usando la herramienta penpot.app.
+- Diseño del front-ent usando la herramienta penpot.app. (Nota uno)
 
-- Componentes en angular maquetados con base en el diseño anterior.
+- Componentes en angular maquetados con base en el diseño anterior. (Nota 2)
 
-- Desarrollo del back-end usando PHP/LARAVEL
+- Desarrollo del back-end usando PHP/LARAVEL (Nota 3)
 
 ### Entregable
 
