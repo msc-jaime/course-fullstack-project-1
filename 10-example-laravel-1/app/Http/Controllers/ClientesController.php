@@ -27,7 +27,7 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-        return Clientes::created($request->post());
+        return Clientes::create($request->post());
     }
 
     /**

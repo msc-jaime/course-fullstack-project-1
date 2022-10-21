@@ -71,3 +71,4 @@ Cliente de base de datos 1: [DBEAVER](https://dbeaver.io/)
 Cliente de base de datos 2: [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 Recurso: [TUTORIAL PHP](https://www.w3schools.com/php/default.asp)
+Status Code: [STATUS CODE](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
