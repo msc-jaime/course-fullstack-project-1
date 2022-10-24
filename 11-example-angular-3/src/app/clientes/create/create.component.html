@@ -1,0 +1,15 @@
+<button [routerLink]="['clientes/index']" >Regresar</button>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <strong for="name">Nombre:</strong>
+  <input formControlName="name" id="name" type="text">
+
+  <strong for="lastName">Apellido:</strong>
+  <input formControlName="lastName" id="lastName" type="text">
+
+  <strong for="address">Dirección:</strong>
+  <input formControlName="address" id="address" type="text">
+
+  <strong for="email">Email:</strong>
+  <input formControlName="email" id="email" type="text">
+  <button type="submit">Enviar</button>
+</form>

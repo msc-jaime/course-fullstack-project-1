@@ -1,0 +1,26 @@
+<h1>Clientes</h1>
+<button [routerLink]="['/clientes/create']" >Crear nuevo cliente</button>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Dirrección</th>
+      <th>Email</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td> {{ cliente.name }}</td>
+      <td> {{ cliente.lastName }}</td>
+      <td> {{ cliente.address }}</td>
+      <td> {{ cliente.email }}</td>
+      <td>
+        <button [routerLink]="['/clientes/', cliente.id, 'edit']" >Editar</button>
+        <button href="#" [routerLink]="['/clientes/', cliente.id, 'show']" >Mostrar</button>
+        <button (click)="deleteCliente(cliente.id)">Borrar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

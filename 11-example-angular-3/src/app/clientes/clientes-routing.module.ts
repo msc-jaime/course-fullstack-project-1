@@ -6,15 +6,15 @@ import { IndexComponent } from './index/index.component';
 import { ShowComponent } from './show/show.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'clientes/', pathMatch: 'full' },
-  { path: 'clientes/', component: IndexComponent },
+  { path: 'clientes', redirectTo: 'clientes/index', pathMatch: 'full'},
+  { path: 'clientes/index', component: IndexComponent },
   { path: 'clientes/create', component: CreateComponent },
-  { path: 'clientes/edit/:clienteId', component: EditComponent },
-  { path: 'clientes/show/:clienteId', component: ShowComponent },
+  { path: 'clientes/:clienteId/edit', component: EditComponent },
+  { path: 'clientes/:clienteId/show', component: ShowComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CrudRoutingModule { }
+export class ClientesRoutingModule { }

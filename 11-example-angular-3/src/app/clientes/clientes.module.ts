@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CrudRoutingModule } from './crud-routing.module';
-import { FormsModule } from '@angular/forms';
+import { ClientesRoutingModule } from './clientes-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IndexComponent } from './index/index.component';
 import { ShowComponent } from './show/show.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -19,9 +20,10 @@ import { EditComponent } from './edit/edit.component';
   ],
   imports: [
     CommonModule,
-    CrudRoutingModule,
+    ClientesRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ]
 })
-export class CrudModule { }
+export class ClientesModule { }
