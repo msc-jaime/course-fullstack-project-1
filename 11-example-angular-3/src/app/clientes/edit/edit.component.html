@@ -1,1 +1,16 @@
-<p>edit works!</p>
+<button href="#" [routerLink]="'/clientes/index'" >Regresar</button>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label for="name">Nombre:</label>
+  <input formControlName="name" id="name" type="text" [value]="cliente.name">
+
+  <label for="lastName">Apellido:</label>
+  <input formControlName="lastName" id="lastName" type="text" [value]="cliente.lastName">
+
+  <label for="address">Dirección:</label>
+  <input formControlName="address" id="address" type="text" [value]="cliente.address">
+
+  <label for="email">Email:</label>
+  <input formControlName="email" id="email" type="text" [value]="cliente.email">
+
+  <button type="submit">Enviar</button>
+</form>

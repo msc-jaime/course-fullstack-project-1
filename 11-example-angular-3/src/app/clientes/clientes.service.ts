@@ -21,6 +21,7 @@ export class ClientesService {
   }
 
   show(id: number): Observable<Cliente> {
+    console.log(id.toString())
     return this.httClient.get<Cliente>(this.api + 'clientes/' + id)
   }
 
@@ -29,7 +30,7 @@ export class ClientesService {
   }
 
   update(id: number,cliente: Cliente) {
-    return this.httClient.put(this.api + 'clientes/' + id.toString, JSON.stringify(cliente), this.httpOptions)
+    return this.httClient.put(this.api + 'clientes/' + id.toString(), JSON.stringify(cliente), this.httpOptions)
   }
 
   delete(id: number) {
