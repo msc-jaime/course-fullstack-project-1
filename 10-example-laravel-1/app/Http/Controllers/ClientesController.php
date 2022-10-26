@@ -27,7 +27,13 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-        return Clientes::create($request->post());
+        $validated = $request->validate([
+            'name' => 'required|min:3|max:255',
+            'lastName' => 'required|min:3|max:255',
+            'address' => 'required',
+            'email' => 'required|unique:clientes|email'
+        ]);
+        return Clientes::create($validated);
     }
 
     /**
@@ -51,7 +57,13 @@ class ClientesController extends Controller
      */
     public function update(Request $request, Clientes $cliente)
     {
-        return $cliente->fill($request->post())->save();
+        $validated = $request->validate([
+            'name' => 'required|min:3|max:255',
+            'lastName' => 'required|min:3|max:255',
+            'address' => 'required',
+            'email' => 'required|email'
+        ]);
+        return $cliente->fill($validated)->save();
     }
 
     /**
