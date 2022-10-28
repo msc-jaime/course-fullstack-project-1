@@ -195,6 +195,16 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * https://docs.laravel-excel.com/3.1/getting-started/installation.html
+         *
+         */
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
+        /**
+         *
+         */
+        Barryvdh\DomPDF\ServiceProvider::class
     ],
 
     /*
@@ -210,6 +220,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ])->toArray(),
 
 ];

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ClientesExport;
 use Illuminate\Http\Request;
 use App\Models\Clientes;
-
+use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ClientesController extends Controller
 {
@@ -75,5 +77,38 @@ class ClientesController extends Controller
     public function delete(Clientes $cliente)
     {
         return $cliente->delete();
+    }
+
+
+    /**
+     * @return .xlsx
+     */
+    public function downloadExcel()
+    {
+        return Excel::download(new ClientesExport, 'clientes.xlsx');
+    }
+
+    /**
+     * @return (0) false (1) true
+     */
+    public function storeExcel()
+    {
+        return Excel::store(new ClientesExport, 'clientes.xlsx', 'public');
+    }
+
+    /**
+     * @return .pdf
+     */
+    public function getPdf() {
+        $data = "Hola mundo";
+        $clientes = Clientes::all();
+        $pdf = Pdf::loadView('pdf.clientes', compact('data', 'clientes'));
+        return $pdf->download('clientes.pdf');
+    }
+
+
+    public function viewPdf() {
+        $pdf = Pdf::loadHTML('<h1>Test</h1>');
+        return $pdf->stream();
     }
 }

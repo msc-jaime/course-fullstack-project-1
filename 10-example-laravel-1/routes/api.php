@@ -28,3 +28,9 @@ Route::post('/clientes', [ClientesController::class, 'store'])->name('clientes.s
 Route::put('/clientes/{cliente}', [ClientesController::class, 'update'])->name('clientes.update');
 Route::delete('/clientes/{cliente}', [ClientesController::class, 'delete'])->name('clientes.delete');
 
+Route::get('/get_excel_clientes', [ClientesController::class, 'downloadExcel'])->name('clientes.downloadExcel');
+Route::get('/store_excel_clientes', [ClientesController::class, 'storeExcel'])->name('clientes.storeExcel');
+
+Route::get('/get_pdf_clientes', [ClientesController::class, 'getPdf'])->name('clientes.getPdf');
+Route::get('/view_pdf_clientes', [ClientesController::class, 'viewPdf'])->name('clientes.viewPdf');
+

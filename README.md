@@ -72,3 +72,5 @@ Cliente de base de datos 2: [MySQL Workbench](https://dev.mysql.com/downloads/wo
 
 Recurso: [TUTORIAL PHP](https://www.w3schools.com/php/default.asp)
 Status Code: [STATUS CODE](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+Gestor de paquetes php: [PACKAGIST](https://packagist.org/)
