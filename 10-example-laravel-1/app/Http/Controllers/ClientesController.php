@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exports\ClientesExport;
 use Illuminate\Http\Request;
-use App\Models\Clientes;
+use App\Models\Cliente;
 use Maatwebsite\Excel\Facades\Excel;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -17,7 +17,7 @@ class ClientesController extends Controller
      */
     public function index()
     {
-        return Clientes::all();
+        return Cliente::all()->toJson();
     }
 
 
@@ -35,7 +35,7 @@ class ClientesController extends Controller
             'address' => 'required',
             'email' => 'required|unique:clientes|email'
         ]);
-        return Clientes::create($validated);
+        return Cliente::create($validated);
     }
 
     /**
@@ -44,7 +44,7 @@ class ClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Clientes $cliente)
+    public function show(Cliente $cliente)
     {
         return $cliente;
     }
@@ -57,7 +57,7 @@ class ClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Clientes $cliente)
+    public function update(Request $request, Cliente $cliente)
     {
         $validated = $request->validate([
             'name' => 'required|min:3|max:255',
@@ -74,7 +74,7 @@ class ClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Clientes $cliente)
+    public function delete(Cliente $cliente)
     {
         return $cliente->delete();
     }
@@ -101,7 +101,7 @@ class ClientesController extends Controller
      */
     public function getPdf() {
         $data = "Hola mundo";
-        $clientes = Clientes::all();
+        $clientes = Cliente::all();
         $pdf = Pdf::loadView('pdf.clientes', compact('data', 'clientes'));
         return $pdf->download('clientes.pdf');
     }
@@ -110,5 +110,9 @@ class ClientesController extends Controller
     public function viewPdf() {
         $pdf = Pdf::loadHTML('<h1>Test</h1>');
         return $pdf->stream();
+    }
+
+    public function getFacturasByCliente(Cliente $cliente) {
+        return Cliente::find($cliente->id);
     }
 }
