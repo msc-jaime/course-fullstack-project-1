@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Factura;
+use App\Models\Cliente;
 
 class FacturasController extends Controller
 {
@@ -74,5 +75,29 @@ class FacturasController extends Controller
         return $factura->delete();
     }
 
+
+    /**
+     * @param Cliente $cliente
+     *
+     * @return [type]
+     */
+    public function getFacturasByCliente(Cliente $cliente) {
+        return Factura::where('id_cliente', strval($cliente->id))->get();
+    }
+
+
+    public function getFacturasAndNombreCliente(Cliente $cliente) {
+        return Factura::select(
+                'facturas.id',
+                'facturas.numero_factura',
+                'facturas.fecha_vencimiento',
+                'facturas.id_cliente',
+                'clientes.name',
+                'clientes.lastName'
+            )->join(
+                'clientes', 'clientes.id', '=', 'facturas.id_cliente'
+            )->orderBy('id_cliente', 'ASC')
+            ->get();
+    }
 
 }

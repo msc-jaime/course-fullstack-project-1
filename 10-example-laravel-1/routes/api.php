@@ -25,7 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/clientes', [ClientesController::class, 'index'])->name('clientes.index');
 Route::get('/clientes/{cliente}', [ClientesController::class, 'show'])->name('clientes.show');
-Route::get('/clientes/{cliente}/facturas', [ClientesController::class, 'getFacturasByCliente'])->name('clientes.getFacturasByCliente');
 Route::post('/clientes', [ClientesController::class, 'store'])->name('clientes.store');
 Route::put('/clientes/{cliente}', [ClientesController::class, 'update'])->name('clientes.update');
 Route::delete('/clientes/{cliente}', [ClientesController::class, 'delete'])->name('clientes.delete');
@@ -42,4 +41,10 @@ Route::get('/facturas/{factura}', [FacturasController::class, 'show'])->name('fa
 Route::post('/facturas', [FacturasController::class, 'store'])->name('facturas.store');
 Route::put('/facturas/{factura}', [FacturasController::class, 'update'])->name('facturas.update');
 Route::delete('/facturas/{factura}', [FacturasController::class, 'delete'])->name('facturas.delete');
+Route::get('/clientes/{cliente}/facturas', [FacturasController::class, 'getFacturasByCliente'])->name('clientes.getFacturasByCliente');
+
+
+
+
+Route::get('/clientesyfacturas', [FacturasController::class, 'getFacturasAndNombreCliente'])->name('clientes.getFacturasAndNombreCliente');
 

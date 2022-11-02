@@ -17,7 +17,7 @@ class ClientesController extends Controller
      */
     public function index()
     {
-        return Cliente::all()->toJson();
+        return Cliente::all();
     }
 
 
@@ -110,9 +110,5 @@ class ClientesController extends Controller
     public function viewPdf() {
         $pdf = Pdf::loadHTML('<h1>Test</h1>');
         return $pdf->stream();
-    }
-
-    public function getFacturasByCliente(Cliente $cliente) {
-        return Cliente::find($cliente->id);
     }
 }
