@@ -1,0 +1,28 @@
+<h1 class="mt-4">Editar factura</h1>
+<hr>
+<button href="#" routerLink="/facturas/index" class="btn btn-secondary mt-4 mb-3">Regresar</button>
+<form [formGroup]="form" (ngSubmit)="submit()" #updstu="ngForm">
+  <div class="mb-3">
+    <label for="numero_factura" class="form-label">Numero factura:</label>
+    <input formControlName="numero_factura"
+           id="numero_factura"
+           type="text"
+           class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="fecha_vencimiento" class="form-label">Fecha vencimiento:</label>
+    <input formControlName="fecha_vencimiento"
+            id="fecha_vencimiento"
+            type="date"
+            class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="id_cliente" class="form-label">Cliente:</label>
+    <input formControlName="id_cliente"
+            id="id_cliente"
+            type="text"
+            class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-success">Enviar</button>
+</form>

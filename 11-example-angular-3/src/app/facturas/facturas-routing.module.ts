@@ -6,15 +6,15 @@ import { IndexComponent } from './index/index.component';
 import { ShowComponent } from './show/show.component';
 
 const routes: Routes = [
-  { path: 'clientes', redirectTo: 'clientes/index', pathMatch: 'full'},
-  { path: 'clientes/index', component: IndexComponent },
-  { path: 'clientes/create', component: CreateComponent },
-  { path: 'clientes/:clienteId/edit', component: EditComponent },
-  { path: 'clientes/:clienteId/show', component: ShowComponent },
+  { path: 'facturas', redirectTo: 'facturas/index', pathMatch: 'full'},
+  { path: 'facturas/index', component: IndexComponent },
+  { path: 'facturas/create', component: CreateComponent },
+  { path: 'facturas/:facturaId/edit', component: EditComponent },
+  { path: 'facturas/:facturaId/show', component: ShowComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class ClientesRoutingModule { }
+export class FacturasRoutingModule { }

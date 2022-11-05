@@ -1,16 +1,36 @@
-<button href="#" [routerLink]="'/clientes/index'" >Regresar</button>
+<h1 class="mt-4">Editar cliente</h1>
+<hr>
+<button href="#" [routerLink]="'/clientes/index'" class="btn btn-secondary mt-4 mb-3">Regresar</button>
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <label for="name">Nombre:</label>
-  <input formControlName="name" id="name" type="text" [value]="cliente.name">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre:</label>
+    <input formControlName="name"
+           id="name"
+           type="text"
+           class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Apellido:</label>
+    <input formControlName="lastName"
+            id="lastName"
+            type="text"
+            class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="address" class="form-label">Dirección:</label>
+    <input formControlName="address"
+            id="address"
+            type="text"
+            class="form-control">
+  </div>
 
-  <label for="lastName">Apellido:</label>
-  <input formControlName="lastName" id="lastName" type="text" [value]="cliente.lastName">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email:</label>
+    <input formControlName="email"
+            id="email"
+            type="text"
+            class="form-control">
+  </div>
 
-  <label for="address">Dirección:</label>
-  <input formControlName="address" id="address" type="text" [value]="cliente.address">
-
-  <label for="email">Email:</label>
-  <input formControlName="email" id="email" type="text" [value]="cliente.email">
-
-  <button type="submit">Enviar</button>
+  <button type="submit" class="btn btn-success">Enviar</button>
 </form>

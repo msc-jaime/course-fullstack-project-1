@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ClientesRoutingModule } from './clientes-routing.module';
+import { FacturasRoutingModule } from './facturas-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IndexComponent } from './index/index.component';
@@ -21,10 +21,10 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     CommonModule,
     BrowserModule,
-    ClientesRoutingModule,
+    FacturasRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ]
 })
-export class ClientesModule { }
+export class FacturasModule { }

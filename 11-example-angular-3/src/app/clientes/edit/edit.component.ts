@@ -13,7 +13,7 @@ export class EditComponent implements OnInit {
 
   id!: number
   form!: FormGroup
-  cliente!: Cliente
+  cliente!: Cliente;
 
   constructor(
     private clientesService : ClientesService,
@@ -22,18 +22,27 @@ export class EditComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['clienteId'];
-    console.log(this.id)
-    this.clientesService.show(this.id).subscribe((cliente: Cliente) => {
-      this.cliente = cliente
-    })
-
     this.form = new FormGroup({
       name: new FormControl(),
       lastName: new FormControl(),
       address: new FormControl(),
       email: new FormControl(),
     })
+
+    this.id = this.route.snapshot.params['clienteId'];
+    console.log(this.id)
+    this.clientesService.show(this.id).subscribe((cliente: Cliente) => {
+      this.cliente = cliente
+      this.form.patchValue(
+        {
+          name: cliente.name,
+          lastName: cliente.lastName,
+          address: cliente.address,
+          email: cliente.email
+        }
+      )
+    })
+
   }
 
   submit() {
