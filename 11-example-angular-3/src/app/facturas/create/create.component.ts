@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Cliente } from 'src/app/clientes/cliente';
+import { ClientesService } from 'src/app/clientes/clientes.service';
 import { FacturasService } from '../facturas.service';
 
 @Component({
@@ -11,8 +13,15 @@ import { FacturasService } from '../facturas.service';
 export class CreateComponent implements OnInit {
 
   form!: FormGroup
+  clientes!: Cliente[]
 
-  constructor(public facturasService: FacturasService, private router: Router) { }
+  constructor(
+    public facturasService: FacturasService,
+    public clientesService: ClientesService,
+    private router: Router
+    ) {
+      this.clientesService.index().subscribe(res => this.clientes = res)
+    }
 
   ngOnInit(): void {
     this.form = new FormGroup({

@@ -10,10 +10,22 @@
     <label for="fecha_vencimiento" class="form-label">Fecha de vencimiento:</label>
     <input formControlName="fecha_vencimiento" id="fecha_vencimiento" type="date" class="form-control">
   </div>
-
+<!--
   <div class="mb-3">
     <label for="id_cliente" class="form-label">Cliente:</label>
     <input formControlName="id_cliente" id="id_cliente" type="text" class="form-control">
   </div>
+-->
+  <div class="mb-3">
+    <label for="id_cliente" class="form-label">Cliente:</label>
+    <select formControlName="id_cliente" class="form-select" aria-label="Default select example">
+      <option
+        *ngFor="let cliente of clientes"
+        [ngValue]="cliente.id">
+          {{ cliente.name }} {{ cliente.lastName }}
+      </option>
+    </select>
+  </div>
+
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>

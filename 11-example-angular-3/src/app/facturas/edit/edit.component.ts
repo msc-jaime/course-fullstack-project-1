@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Cliente } from 'src/app/clientes/cliente';
+import { ClientesService } from 'src/app/clientes/clientes.service';
 import { Factura } from '../factura';
 import { FacturasService } from '../facturas.service';
 
@@ -14,12 +16,19 @@ export class EditComponent implements OnInit {
   id!: number
   form!: FormGroup
   factura!: Factura;
+  clientes!: Cliente[];
 
   constructor(
     private facturasService : FacturasService,
-    public route: ActivatedRoute,
-    public router: Router
-  ) { }
+    private clientesService : ClientesService,
+    public route : ActivatedRoute,
+    public router : Router
+  ) {
+    this.clientesService.index().subscribe(res => {
+      this.clientes = res
+      console.log(this.clientes)
+    })
+  }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -38,15 +47,12 @@ export class EditComponent implements OnInit {
         id_cliente: this.factura.id_cliente
       })
     })
-
-
-
   }
 
   submit() {
     console.log(this.form.value)
     return this.facturasService.update(this.id, this.form.value).subscribe( (res: any) => {
-      this.router.navigateByUrl('factura/index')
+      this.router.navigateByUrl('facturas/index')
     })
   }
 }
