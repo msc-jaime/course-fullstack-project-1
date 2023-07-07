@@ -15,7 +15,7 @@ export class ExampleThreeComponent implements OnInit {
 
   constructor(crubServices: CrubService) { 
     this.crubServices = crubServices;
-  }
+  } 
   
   ngOnInit(): void {
     
@@ -24,6 +24,16 @@ export class ExampleThreeComponent implements OnInit {
 
   createPots() {
     this.crubServices.createPost(this.url).subscribe(res => console.log(res))
+  }
+
+  updatePots(){
+    this.crubServices.update(`${this.url}/1`  )
+      .subscribe(res => console.log(res))
+  }
+
+  delete(){
+    this.crubServices.deletePost(`${this.url}/1`  )
+      .subscribe(res => console.log(res))
   }
   
 }

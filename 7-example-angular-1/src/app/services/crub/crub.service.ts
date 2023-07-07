@@ -25,6 +25,14 @@ export class CrubService {
     })
   }
 
-  updatePost(){}
-  deletePost(){}
+  update(url: string){
+    return this.httpClient.put(url,{
+      title: 'xx',
+      body: 'yyy',
+    })
+  }
+
+  deletePost(url: string){
+    return this.httpClient.delete(url)
+  }
 }
